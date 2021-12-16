@@ -2,9 +2,6 @@ package Raetsel2021;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Currency;
 
 /*\ Extended Polymerization \*/
 public class Dec14 extends Puzzle
@@ -18,7 +15,7 @@ public class Dec14 extends Puzzle
 	public void read() throws IOException
 	{
 		prepare();
-		br.readLine(); //überspringe die ersten zwei zeilen
+		br.readLine(); //Ã¼berspringe die ersten zwei zeilen
 		br.readLine(); 
 		
 		rules = new Rule[lines-2];
@@ -71,8 +68,8 @@ public class Dec14 extends Puzzle
 		prepare();
 		readInput("String");
 		
-		erg1 = solve(0);
-		erg2 = solve(1);
+		erg1 = solve(10);
+		erg2 = solve(40);
 		//solveTask1();
 		//solveTask2();
 		System.out.println("Task 1 -- " + erg1);
@@ -85,7 +82,7 @@ public class Dec14 extends Puzzle
 		initializeRuleCounts();
 		for(int step=0; step<steps; step++)
 		{
-			//merke alle änderungen in einem neuen Rule array
+			//merke alle Ã¤nderungen in einem neuen Rule array
 			Rule[] changes = rules.clone();		
 			for(int i=0; i<rules.length; i++)
 			{
