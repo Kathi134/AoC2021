@@ -67,7 +67,6 @@ public class Dec18 extends Puzzle
 			for(int i=0; i<realPairs.size(); i++)
 			{
 				String currPair = realPairs.get(i);
-			//	int leftNumber = Character.getNumericValue(currPair.charAt(1));
 				int leftNumber = Integer.parseInt(currPair.substring(1, currPair.indexOf(",")));
 				int rightNumber = Integer.parseInt(currPair.substring(currPair.indexOf(",")+1, currPair.length()-1));
 				int currMagnitude = 3*leftNumber + 2*rightNumber;
@@ -124,8 +123,6 @@ public class Dec18 extends Puzzle
 		//add first two lines together
 		//repeat the rules priorisized explode > split
 		line = add(input.get(line1), input.get(line2));
-		
-		//line = inputStringList[indexSummand1]; //zum debuggen
 		
 		while(explodable() || splittable())
 		{
@@ -285,7 +282,7 @@ public class Dec18 extends Puzzle
 	{
 		if(direction.equals("left"))
 		{
-			//breakpoint ist index der f¸nften klammer also abzug von ',['
+			//breakpoint ist index der f√ºnften klammer also abzug von ',['
 			for(int cursor = index-2; cursor>=0; cursor--)
 			{
 				if(!Character.isDigit(s.charAt(cursor)))
@@ -342,9 +339,9 @@ public class Dec18 extends Puzzle
 	
 	public void solveTask2()
 	{
-		//f¸r jede zeile addiere alle anderen zeilen ein mal
+		//f√ºr jede zeile addiere alle anderen zeilen ein mal
 		//wenn neuer rekord -> speichern
-		//string list enth‰lt alle summanden unver‰ndert
+		//string list enth√§lt alle summanden unver√§ndert
 		for(int i=0; i<inputStringList.length; i++)
 		{			
 			for(int j=0; j<inputStringList.length; j++)
